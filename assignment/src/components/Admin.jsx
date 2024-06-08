@@ -78,7 +78,7 @@ export default function Admin() {
       handleUpdate(editingCourseId, {
         title: updateTitle,
         desc: updateDesc,
-        number_of_weeks: updateNumber_of_weeks,
+        number_of_weeks: updateNumber_of_weeks > 0,
         image: updateImage,
         Start_date: updateStart_date,
         active: updateActive,
@@ -136,6 +136,7 @@ export default function Admin() {
                   </div>
                   <div className="mb-3">
                     <input
+                      min={0}
                       type="number"
                       className="form-control"
                       id="floatingNumber"
