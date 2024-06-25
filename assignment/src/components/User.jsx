@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import profilePic from "../assets/pic4-4.jpg";
 import { useCourseContext } from "./context/courseContext";
 import { Modal, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function User() {
   const { data, title, desc, number_of_weeks, image, Start_date, active } =
@@ -18,6 +19,9 @@ export default function User() {
 
   return (
     <>
+      <Link to="/Admin" className="btn btn-primary mb-3">
+        Come to Admin Page
+      </Link>
       <div className="cardList">
         {data.map((item, index) => (
           <div className="card" key={index}>

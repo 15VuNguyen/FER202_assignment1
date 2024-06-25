@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useCourseContext } from "./context/courseContext";
+import { Link } from "react-router-dom";
 
 export default function Admin() {
   const {
@@ -89,6 +90,9 @@ export default function Admin() {
 
   return (
     <>
+      <Link to="/" className="btn btn-primary mb-3">
+        Come to User Page
+      </Link>
       {success ? (
         <div>
           <div className="container my-5 py-2">
